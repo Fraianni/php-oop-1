@@ -16,14 +16,10 @@ class Movie
 
     private function setVote($_vote)
     {
-        if ($_vote <= 10)
-            $this->vote = $_vote;
-        else {
-            while ($_vote > 10) {
-                $_vote = $_vote / 10;
-            }
-            $this->vote = $_vote;
+        while ($_vote > 10) {
+            $_vote = $_vote / 10;
         }
+        $this->vote = $_vote;
     }
 
 
@@ -35,5 +31,5 @@ class Movie
     }
 }
 
-$rocky = new Movie("rocky", "azione", 110);
+$rocky = new Movie("rocky", "azione", 10);
 echo ($rocky->vote . '<br>');
