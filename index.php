@@ -31,5 +31,46 @@ class Movie
     }
 }
 
-$rocky = new Movie("rocky", "azione", 10);
-echo ($rocky->vote . '<br>');
+$rocky = new Movie("rocky", "azione", 60);
+$rambo = new Movie("rambo", "azione", 7);
+
+?>
+<div class="container">
+    <div class="film">
+        <?php
+        echo ($rocky->nome . '<br>');
+        echo ($rocky->genre . '<br>');
+        echo ($rocky->vote . '<br>');
+        ?>
+    </div>
+
+    <div class="film">
+        <?php
+        echo ($rambo->nome . '<br>');
+        echo ($rambo->genre . '<br>');
+        echo ($rambo->vote . '<br>');
+        ?>
+    </div>
+</div>
+
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .film {
+        border: 1px solid black;
+        margin: 10px 0px;
+        background-color: antiquewhite;
+        text-align: center;
+        width: 300px;
+    }
+</style>
